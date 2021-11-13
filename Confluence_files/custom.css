@@ -1,0 +1,14 @@
+
+#ul.contributors-list 
+ { 
+display:none; 
+} 
+#forgot-password 
+{
+  display:none;
+}
+#content.edit {
+    display: table-cell;
+}
+
+
