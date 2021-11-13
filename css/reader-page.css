@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+/* Desenvolvido por Jimmy Wesley Maciel Soares */
+
+.audio-container {
+  background-color: #efefef;
+  box-shadow: inset -1px -1px 5px rgba(33,33,33, 0.5), inset 1px 1px 5px rgba(33,33,33,0.5); 
+  display: flex;
+  padding: 3px 14px;
+  position: fixed;
+  z-index: 10;
+  top: 90%;
+  left: 70%;
+}
+
+.img-container {
+  position: relative;
+  width: 110px;
+}
+
+/* using animation to make the image rotate continiously when audio is playing */
+.img-container img {
+  object-fit: cover;
+  height: 50px;
+  width: inherit;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  animation-play-state: paused;
+  display:none;
+}
+
+/* making sure the image rotates only when the audio is playing */
+.audio-container.play .img-container img {
+  animation-play-state: running;
+  display:block;
+}
+/* creating the animation keyframe and setting the image to rotate 360 degrees continiously */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+/* styling the navigation buttons */
+.action-btn {
+  border: 0;
+  font-size: 26px;
+  cursor: pointer;
+  padding: 5px;
+  margin: 0px 10px;
+}
+
+.action-btn.action-btn-big {
+  font-size: 30px;
+  outline: none;
+}
+
+.action-btn:focus {
+  outline: 0;
+}
+
+/* styling the audio-info div by placing it under the audio container */
+.audio-info {
+  background-color: rgba(255, 255, 255, 0.788);
+  border-radius: 15px 15px 0 0;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  width: calc(100% - 40px);
+  padding: 10px 10px 10px 10px ;
+  opacity: 0;
+  transform: translateY(0%);
+  transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+  z-index: 0;
+}
+
+/* making the audio info pop up when the audio playing using the transform property*/
+.audio-container.play .audio-info {
+  opacity: 1;
+  transform: translateY(-100%);
+}
+
+.audio-info h4 {
+  margin: 0;
+}
+
+/* styling the song progress container */
+.progress-container {
+  background: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 0;
+  height: 4px;
+  width: 100%;
+}
+
+/* styling the actual progress bar and making it flow along with the song*/
+.progress {
+  background-color: #ff4848;
+  border-radius: 5px;
+  height: 100%;
+  width: 0%;
+  transition: width 0.1s linear;
+}
