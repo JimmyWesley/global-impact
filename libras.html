@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p>Integrando uma página web</p>
+
+    <h3>LIBRAS</h3>
+    <p>A integração do VLibras Widget com um website é feita com a inserção de alguns fragmentos de código antes do fechamento da tag <body> de uma página HTML. Veja o exemplo:</p>
+        
+        
+        <body> <!-- Inicio do corpo da página -->
+
+            ... <!-- Conteúdo da página -->
+          
+            <div vw class="enabled">
+              <div vw-access-button class="active"></div>
+              <div vw-plugin-wrapper>
+                <div class="vw-plugin-top-wrapper"></div>
+              </div>
+            </div>
+            <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+            <script>
+              new window.VLibras.Widget('https://vlibras.gov.br/app');
+            </script>
+          </body> <!-- Fim do corpo da página -->
+
+            <h3>TEMA ESCURO E INVERSÃO DE CORES</h3>
+           <p>
+               Algumas destas etapas funcionam apenas no Android 11.0 e em versões mais recentes. Aprenda a verificar sua versão do Android.
+
+            É possível mudar a exibição para um plano de fundo escuro usando um tema escuro ou a inversão de cores.
+
+            O tema escuro se aplica à IU do sistema Android e aos apps compatíveis. As cores não são modificadas em mídias, como vídeos.
+            A inversão de cores se aplica a tudo no seu dispositivo, incluindo mídia. Por exemplo, o texto preto em uma tela branca se torna branco em uma tela preta. Pode haver problemas com a qualidade da cor ou a legibilidade.
+            Ativar o tema escuro
+            Abra o app Configurações App Configurações do dispositivo.
+            Toque em Acessibilidade.
+            Em "Tela", ative a opção Tema escuro.
+            Ative a inversão de cores.
+            Abra o app Configurações App Configurações do dispositivo.
+            Toque em Acessibilidade.
+            Em "Tela", toque em Inversão de cores.
+            Ative a opção Usar inversão de cores.
+            Opcional: ative a opção Atalho da inversão de cores. Saiba mais sobre os atalhos de acessibilidade.
+            Como usar o tema escuro e a inversão de cores juntos
+            Android 10 ou versões mais recentes: se você abrir um app que não é compatível com um tema escuro, ative esse tema e a inversão de cores.
+            Android 9 ou versões anteriores: só é possível usar uma dessas configurações de cada vez. Por exemplo, se você ativar o tema escuro, a inversão de cores será desativada automaticamente.
+           </p> 
+           <p>fonte: https://support.google.com/accessibility/android/answer/6151800?hl=pt-BR</p>
+    
+</body>
+</html>
